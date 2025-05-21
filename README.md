@@ -5,15 +5,46 @@ Liane_Library is a database project designed to manage a digital library system.
 
 ---
 
-## Project Structure
+## 📝 Description of Key Files
 
-- `Books Database-Schema.xlsx` – Visual schema of the database structure.
-- `Liane_Library.mwb` – MySQL Workbench model.
-- `LianesLibrary_Create_Tables.sql` – Script to create all necessary tables.
-- `LianesLibrary_Insert_Data.sql` – Sample data insertion script.
-- `SQL Schema.docx` – Detailed documentation of each table and its fields.
-- `View_Function_procedures.docx` – Includes views, functions, and procedures used in the database.
-- `Input Data.docx` – Sample input data examples for testing.
+- `main.py`: The main entry point of the application, containing all Streamlit UI logic and user interaction workflows.
+- `db_utils.py`: A utility module that includes reusable database functions, such as executing SQL queries and calling stored procedures.
+- `requirements.txt`: Specifies all Python dependencies required to run the project.
+- `README.md`: Contains project documentation, including setup instructions, reflections, and usage guidelines.
+- `schema.sql`: (Optional) You can include this to initialize your MySQL schema.
+- `sql_views_and_procedures/`: (Optional) Directory for storing raw SQL scripts used to create views (e.g., viewBorrowedBooks, viewReturnedBooks) and stored procedures.
+
+
+# 📚 Library Management System
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-%E2%9C%94-red)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+A web-based application built with Streamlit and MySQL to simulate a library management system. This app allows users to view books, borrow and return books, track loan statuses, and submit reviews.
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/library-management-system.git
+   cd library-management-system
+2. **Create a Virtual Environment**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. **Install Dependencies**
+   ```bash
+   pip install streamlit pandas sqlalchemy pymysql
+   pip install -r requirements.txt
+4. **Start the App**
+   ```bash
+   streamlit run app.py
+5. **Ensure MySQL is running and the correct database schema is loaded with the required tables and views.**
+
 
 ---
 
@@ -21,15 +52,18 @@ Liane_Library is a database project designed to manage a digital library system.
 
 ### Prerequisites
 
-- MySQL Server installed (version 8.0+ recommended)
-- MySQL Workbench (if using `.mwb` file)
-- Any SQL client (e.g., DBeaver, HeidiSQL)
+- MySQL Server installed (version 8.0 or higher recommended)
+- MySQL Workbench (optional, for opening the .mwb schema file)
+- Any SQL client such as DBeaver or HeidiSQL (for managing the database)
+- Visual Studio Code or Google Colab (for writing and running Python code)
+
 
 ### Setup Instructions
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/annaphuongwit/Liane_Library.git
-2. Open the .mwb file using MySQL Workbench (optional, for visual schema).
-3. Run LianesLibrary_Create_Tables.sql to create the database structure.
-4. Run LianesLibrary_Insert_Data.sql to populate with sample data.
+2. Open the .mwb file using MySQL Workbench (optional – for visualizing the schema).
+3. Run the queries in Liane_Library_Management.sql to create the database structure.
+4. Execute the remaining queries in the same SQL file to populate the database with sample data and to create the necessary stored procedures and functions.
+
